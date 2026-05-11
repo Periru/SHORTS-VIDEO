@@ -1,0 +1,52 @@
+# Twitch Clip Generator Configuration
+
+twitch:
+  client_id: "your_client_id_here"
+  oauth_token: "your_oauth_token_here"
+  default_channel: "shroud"
+
+processing:
+  clip_duration: 60  # Длительность клипа в секундах (30-90 рекомендуется)
+  min_clip_score: 0.7  # Минимальный порог качества (0.0-1.0)
+  max_clips: 5  # Максимальное количество клипов за одну обработку
+  output_format: "vertical"  # vertical, square, horizontal
+  
+features:
+  analyze_audio: true  # Анализ аудио-пиков
+  analyze_chat: true  # Анализ активности чата
+  detect_emotions: true  # Детекция эмоций на лице
+  generate_subtitles: true  # Автогенерация субтитров
+  smart_crop: true  # Умная обрезка под вертикальный формат
+  
+audio:
+  peak_threshold: 0.8  # Порог для обнаружения пиков громкости
+  laugh_detection: true  # Детекция смеха
+  scream_detection: true  # Детекция криков/восклицаний
+  
+chat:
+  hype_multiplier: 1.5  # Множитель для хайповых эмодзи
+  spam_filter: true  # Фильтр спама
+  emote_priority: ["PogChamp", "Kappa", "LUL", "OMEGALUL", "monkaS"]
+
+emotions:
+  priority_emotions: ["joy", "surprise", "excitement"]
+  confidence_threshold: 0.6
+
+subtitles:
+  font: "Arial"
+  font_size: 48
+  color: "white"
+  outline_color: "black"
+  position: "bottom"
+
+output:
+  directory: "./output"
+  format: "mp4"
+  resolution: "1080x1920"  # Для TikTok/Shorts
+  fps: 30
+  bitrate: "5000k"
+  
+performance:
+  use_gpu: true  # Использовать GPU если доступен
+  batch_size: 4
+  num_workers: 4

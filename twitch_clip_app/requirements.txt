@@ -1,0 +1,23 @@
+# Twitch Clip Generator Pro - Desktop Application
+
+## 📋 Требования к зависимостям
+
+### Основные зависимости
+customtkinter>=5.2.0
+Pillow>=10.0.0
+numpy>=1.24.0
+pyyaml>=6.0
+openai-whisper>=20230918
+librosa>=0.10.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+### Для работы с видео
+# FFmpeg должен быть установлен в системе отдельно
+# Windows: https://ffmpeg.org/download.html
+# macOS: brew install ffmpeg
+# Linux: sudo apt install ffmpeg
+
+### Опциональные зависимости (для расширенных функций)
+# opencv-python>=4.8.0  # Для детекции лиц и эмоций
+# transformers>=4.30.0  # Для AI-анализа контента
